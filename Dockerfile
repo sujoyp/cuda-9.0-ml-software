@@ -12,7 +12,7 @@ RUN chmod +x ./Anaconda2-5.0.1-Linux-x86_64.sh
 RUN bash Anaconda2-5.0.1-Linux-x86_64.sh -b -p /anaconda2
 RUN rm Anaconda2-5.0.1-Linux-x86_64.sh
 RUN export PATH=/anaconda2/bin:$PATH
-RUN conda install pytorch=0.4.1 torchvision cuda90 -c pytorch
+RUN conda install pytorch=0.4.1 torchvision cuda90 -c pytorch -y
 
 RUN # OpenCV dependencies
 RUN # ===================
