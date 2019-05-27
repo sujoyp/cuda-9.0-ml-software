@@ -1,5 +1,6 @@
-FROM ucrdocker/cuda-10.1-base
-FROM ucrdocker/cuda-10.1-base
+FROM ucrdocker/cuda-9.0-base
+FROM ucrdocker/cuda-9.0-base
+
 RUN # Update list of available packages, then upgrade them
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
