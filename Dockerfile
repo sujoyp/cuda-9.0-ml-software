@@ -7,13 +7,11 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 RUN # Pytorch
 RUN apt-get install -y python-pip
 RUN pip install --no-cache-dir matplotlib
-RUN wget https://repo.continuum.io/archive/Anaconda2-5.0.1-Linux-x86_64.sh
-RUN chmod +x ./Anaconda2-5.0.1-Linux-x86_64.sh
-RUN bash Anaconda2-5.0.1-Linux-x86_64.sh -b -p /anaconda2
-RUN rm Anaconda2-5.0.1-Linux-x86_64.sh
-RUN export PATH=/anaconda2/bin:$PATH
-RUN conda install pytorch=0.4.1 torchvision cuda90 -c pytorch -y
-RUN pip install tensorboard_logger
+RUN pip install --no-cache-dir https://download.pytorch.org/whl/cu100/torch-1.1.0-cp27-cp27mu-linux_x86_64.whl
+RUN pip install --no-cache-dir torchvision
+RUN pip install --no-cache-dir matplotlib
+RUN pip install --no-cache-dir tensorboard_logger
+
 
 RUN # OpenCV dependencies
 RUN # ===================
