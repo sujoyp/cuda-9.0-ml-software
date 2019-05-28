@@ -9,8 +9,8 @@ RUN # Pytorch
 RUN apt-get install -y python-pip
 RUN pip install --no-cache-dir https://download.pytorch.org/whl/cu100/torch-1.1.0-cp27-cp27mu-linux_x86_64.whl
 RUN pip install --no-cache-dir torchvision
-RUN pip install --no-cache-dir matplotlib==0.0.4
-RUN pip install --no-cache-dir tensorboard_logger
+RUN pip install --no-cache-dir matplotlib
+RUN pip install --no-cache-dir tensorboard_logger==0.0.4
 
 
 RUN # OpenCV dependencies
