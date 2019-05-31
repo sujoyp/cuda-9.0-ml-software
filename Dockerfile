@@ -2,7 +2,7 @@ FROM ucrdocker/cuda-9.0-base
 FROM ucrdocker/cuda-9.0-base
 
 RUN # Update list of available packages, then upgrade them
-RUN apt-get update
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y upgrade
 
 RUN # Pytorch
